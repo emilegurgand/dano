@@ -10,7 +10,11 @@ export class UsersService {
   private readonly usersReposiory: Repository<Users>;
 
   async findByNickname(nickname: string): Promise<Users | null> {
-    return this.usersReposiory.findOne({ where: { nickname: nickname } });
+    return this.usersReposiory.findOne({ where: { nickname } });
+  }
+
+  async findByUuid(uuid: string): Promise<Users | null> {
+    return this.usersReposiory.findOne({ where: { uuid } });
   }
 
   async createUser(nickname: string, password: string): Promise<Users> {

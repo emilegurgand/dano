@@ -35,4 +35,6 @@ export class Word {
 
   @ManyToOne(() => Users, (user) => user.words)
   user: Users;
+
+  //todo: set origin and translate language
 }
