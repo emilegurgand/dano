@@ -1,0 +1,1 @@
+insert into users (uuid, nickname, password) values ('8179532d-0a3c-4edd-9429-3fcfb9718d30', 'emile', 'password');
